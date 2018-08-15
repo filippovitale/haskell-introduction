@@ -2,19 +2,25 @@
 
 ## GHC Haskell REPL
 
-```
-docker run -it --rm -v `pwd`:/root mitchty/alpine-ghc ghci
-                            run the GHC Haskell REPL --^
-                     ^-- expose the current dir into the container
-                ^-- remove the container when terminated
-            ^-- interactive mode
-        ^-- run a container of this image --^
+```bash
+# spinup this image ---\
+#                      |
+#                      ,
+
+docker run -it --rm haskell ghci
+
+#                            ^
+#                            |
+# running the Haskell REPL --|
+
+# `-it`  <-- interactive mode
+# `--rm` <-- remove the container when terminated
 ```
 
 
 ## Getting familiar with the syntax
 
-```
+```haskell
 -- Let's play with List -------------------------------------------
 Prelude> [1,2,3]
 [1,2,3]
